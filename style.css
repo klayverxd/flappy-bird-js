@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Pixel";
+    src: url(./font/Pixel.ttf);
+}
+
+body {
+    margin: 0;
+    background-color: #5f9b5e;
+    color: #fff;
+}
+
+h1 {
+    font-family: monospace;
+    text-align: center;
+}
+
+[flappy] {
+    background: url("https://healeycodes.com/bf53663c1cd5c3e03cf4a29bce51856e/flappy-bird.gif") left no-repeat;
+    background-size: cover;
+    
+    position: relative;
+    
+    border: 5px solid dodgerblue;
+    
+    height: 600px;
+    width: 1200px;
+    margin: auto;
+
+    overflow: hidden;
+}
+
+.passaro {
+    position: absolute;
+    width: 60px;
+    left: calc(50% - 30px);
+    bottom: 50%;
+    z-index: 10;
+}
+
+.par-de-barreiras {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.barreira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.barreira .borda {
+    background: linear-gradient(90deg, #639301, #a5e82e);
+
+    height: 30px;
+    width: 130px;
+
+    border: 2px solid #000;
+}
+
+.barreira .corpo {
+    background: linear-gradient(90deg, #639301, #a5e82e);
+
+    height: 40px;
+    width: 110px;
+
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+
+.progresso {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: Pixel;
+    font-size: 70px;
+    z-index: 100;
+}
+
+[game-over] {
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    font-family: Pixel;
+    font-size: 120px;
+    z-index: 100;
+}
